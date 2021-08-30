@@ -1,6 +1,6 @@
-Promise 方法
+/* Promise 方法
 Promise有一个 all 方法：
-
+ */
 var fs        = require('fs');
 var readdir   = promisify(fs.readdir);
 var stat      = promisify(fs.stat);
@@ -58,9 +58,9 @@ readDirRecur('D:/github/oncedoc', function(filePath) {
 }).catch(function(err) {
   console.log(err);
 });
-计数方法：
+/* 计数方法：
 计数是比较常用的一种方法，其原理类似于c/c++中的引用计数，实现起来比较容易:
-
+ */
 var fs        = require('fs');
 
 function readDirRecur(folder, callback) {
@@ -100,7 +100,7 @@ readDirRecur('D:/github/oncedoc', function(filePath) {
   console.log('done', new Date() - timeStart);
   console.log(fileList);
 })
-
+/* 
 测试结果比较：
 Promise法，耗时 6.2 秒 左右
 
@@ -109,8 +109,8 @@ done 6214
 [ ...
   ... 55621 more items ]
 计数法，耗时 3.5秒左右
-
-$ node test.count.js
+ */
+/* $ node test.count.js
 done 3590
 [ ...
   ... 55621 more items ]
@@ -119,4 +119,4 @@ done 3590
 作者：流动码文
 链接：https://www.jianshu.com/p/324b44a75d39
 来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 */
